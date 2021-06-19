@@ -17,6 +17,9 @@ namespace Test.BusinessRule
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddScoped<IRuleType, PhysicalProduct>();
             serviceCollection.AddScoped<IRuleType, Book>();
+            serviceCollection.AddScoped<IRuleType, Membership>();
+            serviceCollection.AddScoped<IRuleType, UpgradeMembership>();
+            serviceCollection.AddScoped<IRuleType, Video>();
 
             serviceCollection.AddScoped<IShippingService, ShippingService>();
             serviceCollection.AddScoped<IPaymentService, PaymentService>();
