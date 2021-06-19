@@ -6,20 +6,20 @@ namespace Test.BusinessRule.Services.Membership
 {
     public interface IMembershipService
     {
-        void Activate();
-        void Upgrade();
+        bool Activate();
+        bool Upgrade();
     }
 
     public class MembershipService : IMembershipService
     {
-        public void Activate()
+        public bool Activate()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
-        public void Upgrade()
+        public bool Upgrade()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

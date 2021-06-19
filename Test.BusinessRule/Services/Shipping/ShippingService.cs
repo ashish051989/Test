@@ -6,26 +6,26 @@ namespace Test.BusinessRule.Services.Shipping
 {
     public interface IShippingService
     {
-        void CreateSlip();
-        void CreateDuplicateSlip();
-        void CreateSlipWithVideo(object content);
+        bool CreateSlip();
+        bool CreateDuplicateSlip();
+        bool CreateSlipWithVideo(object content);
     }
 
     public class ShippingService : IShippingService
     {
-        public void CreateDuplicateSlip()
+        public bool CreateDuplicateSlip()
         {
-            //throw new NotImplementedException();
+            return true;
         }
 
-        public void CreateSlip()
+        public bool CreateSlip()
         {
-            //throw new NotImplementedException();
+            return true;
         }
 
-        public void CreateSlipWithVideo(object content)
+        public bool CreateSlipWithVideo(object content)
         {
-
+            return true;
         }
     }
 }

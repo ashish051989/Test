@@ -6,14 +6,14 @@ namespace Test.BusinessRule.Services.PaymentService
 {
     public interface IPaymentService
     {
-        void GenerateCommission();
+        bool GenerateCommission();
     }
 
     public class PaymentService : IPaymentService
     {
-        public void GenerateCommission()
+        public bool GenerateCommission()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

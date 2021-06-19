@@ -6,14 +6,15 @@ namespace Test.BusinessRule.Services.Email
 {
     public interface IEmailService
     {
-        void Notify();
+        bool Notify();
     }
 
     public class EmailService : IEmailService
     {
-        public void Notify()
+        public bool Notify()
         {
-            throw new NotImplementedException();
+            return true;
+            //throw new NotImplementedException();
         }
     }
 }
