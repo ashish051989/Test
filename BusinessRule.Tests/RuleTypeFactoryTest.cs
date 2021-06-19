@@ -16,15 +16,15 @@ namespace BusinessRule.Tests
         private readonly IEnumerable<IRuleType> ruleTypes;
 
         private readonly Mock<IShippingService> _mockShippingService;
-        private readonly Mock<IPaymentService> _mockPaymentService;
-        private readonly Mock<IMembershipService> _mockMembershipService;
+        private readonly Mock<PaymentService> _mockPaymentService;
+        private readonly Mock<MembershipService> _mockMembershipService;
         private readonly Mock<IEmailService> _mockEmailService;
 
         public RuleTypeFactoryTest()
         {
             _mockShippingService = new Mock<IShippingService>();
-            _mockPaymentService = new Mock<IPaymentService>();
-            _mockMembershipService = new Mock<IMembershipService>();
+            _mockPaymentService = new Mock<PaymentService>();
+            _mockMembershipService = new Mock<MembershipService>();
             _mockEmailService = new Mock<IEmailService>();
 
             ruleTypes = new List<IRuleType>

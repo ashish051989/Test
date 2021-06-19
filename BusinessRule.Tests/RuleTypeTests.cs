@@ -11,12 +11,12 @@ namespace BusinessRule.Tests
     public class RuleTypeTests
     {
         private readonly Mock<IShippingService> _mockShippingService;
-        private readonly Mock<IPaymentService> _mockPaymentService;
+        private readonly Mock<PaymentService> _mockPaymentService;
 
         public RuleTypeTests()
         {
             _mockShippingService = new Mock<IShippingService>();
-            _mockPaymentService = new Mock<IPaymentService>();
+            _mockPaymentService = new Mock<PaymentService>();
         }
 
         [Fact]
