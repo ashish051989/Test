@@ -12,7 +12,15 @@ namespace Test.BusinessRule
 
             var ruleTypes = provider.GetServices<IRuleType>();
 
-            var ruleType = new RuleFactory(ruleTypes).GetRuleType(nameof(PhysicalProduct));
+            Console.WriteLine($"Please Enter Product Type : {nameof(PhysicalProduct)}, " +
+                $"{nameof(Book)}, {nameof(Membership)}, {nameof(UpgradeMembership)}, {nameof(Video)}");
+
+            var productType = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(productType))
+                Console.WriteLine("Please Enter the Product Type");
+
+            var ruleType = new RuleFactory(ruleTypes).GetRuleType(productType);
 
             ruleType.ApplyRule();
         }
